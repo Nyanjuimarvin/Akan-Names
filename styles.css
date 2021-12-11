@@ -5,10 +5,16 @@ nav{
     background-color: #9d2b20;
 }
 nav a>img{
-    height: 200px;
+    height: 140px;
     border-radius: 50%;
 }
 nav h3{
     vertical-align: 70%;
 }
-nav h3,
+nav a:last-of-type button{
+    width: 80px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: #6f7f7f;
+}
