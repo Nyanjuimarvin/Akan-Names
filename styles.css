@@ -22,7 +22,17 @@ nav a:last-of-type button{
     height: 700px;
     background-image: url(images/dfe2d55c54a8d836c04f37874ea28e80.jpg);
 }
-
+.container2{
+    background-color: #9d2b20;
+    padding: 30px;
+}
 .col-8{
     display: flex;
+    justify-content: center;
+}
+.image img{
+    width: 550px;
+}
+footer{
+    background-image: url(images/709616122534e90b8c2a289ce0a07f9b.jpg);
 }
