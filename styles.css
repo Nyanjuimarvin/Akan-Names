@@ -1,7 +1,13 @@
 nav{
     display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 nav a>img{
     height: 200px;
     border-radius: 50%;
 }
+nav h3{
+    vertical-align: 70%;
+}
+nav h3,
