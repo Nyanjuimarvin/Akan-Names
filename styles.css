@@ -18,6 +18,11 @@ nav a:last-of-type button{
     border-radius: 10px;
     background-color: #6f7f7f;
 }
-.container{
+.container1{
+    height: 700px;
     background-image: url(images/dfe2d55c54a8d836c04f37874ea28e80.jpg);
+}
+
+.col-8{
+    display: flex;
 }
