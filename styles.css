@@ -2,6 +2,7 @@ nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background-color: #9d2b20;
 }
 nav a>img{
     height: 200px;
