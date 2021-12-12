@@ -1,5 +1,5 @@
-*{
-    color: #9aa535;
+h1,h2{
+    color: #000;
     font-family: african;
 }
 
@@ -25,27 +25,29 @@ nav a:last-of-type button{
     background-color: #6f7f7f;
 }
 .container1{
-    height: 700px;
+    padding: 350px 0;
     background-image: url(images/dfe2d55c54a8d836c04f37874ea28e80.jpg);
 }
 .container2{
     background-color: #9d2b20;
+    padding: 120px 0;
 }
 .col-8{
     display: flex;
     justify-content: center;
-    align-content: center;
 }
-.image img{
+.left{
     height: 550px;
+    width: 940px;
+    background-image: url(images/H4091-L143757687.jpg);
+    opacity: 0.6;
     z-index: 1;
-    margin-left: -30px;
 }
 .form{
     background-color: #6f7f7f;
     height: 550px;
     position: absolute;
-    margin-left: 45%;
+    margin-left: 25%;
     z-index: 2;
 }
 .form h2{
@@ -56,18 +58,22 @@ label{
     font-weight: bold;
 }
 #first input{
-    margin-left: 40px;
+    margin-left: 30px;
     width: 250px;
+    height: 30px;
 }
 #second span{
     margin-left: 40px;
 }
 #second input{
     width: 60px;
+    height: 20px;
 }
 #third{
     margin-left: 100px;
-    width: 250px;
+}
+#third input{
+    height: 20px;
 }
 #fourth span{
     margin-left: 30px;
@@ -84,7 +90,6 @@ label{
 }
 footer{
     text-align: center;
-    overflow: hidden;
-    padding: 30px;
+    padding: 30px 0;
     background-image: url(images/709616122534e90b8c2a289ce0a07f9b.jpg);
 }
