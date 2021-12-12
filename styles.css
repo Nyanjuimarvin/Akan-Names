@@ -1,3 +1,9 @@
+*{
+    color: #9aa535;
+    font-family: african;
+}
+
+
 nav{
     display: flex;
     justify-content: space-around;
