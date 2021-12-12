@@ -46,8 +46,7 @@ form.addEventListener('submit',(e)=>{
   assignMaleAkan( maleRadio, dayVal );
   assignFemaleAkan( femaleRadio, dayVal );
   alert(`Hey ${nameVal} , You were born on${weekDay(switchable)}..Your Akan Name is${select(userGender)}`);
-
-  alert('SUBMITTED');
+  
 });
 
 //Validate date

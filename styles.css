@@ -25,7 +25,7 @@ nav a:last-of-type button{
     background-color: #6f7f7f;
 }
 .container1{
-    padding: 200px 0;
+    padding: 130px 0;
     text-align: center;
     font-size: 28px;
     line-height: 15px;
@@ -49,7 +49,11 @@ nav a:last-of-type button{
     opacity: 0.6;
     z-index: 1;
 }
-.form{
+.left h4{
+    margin-left: 80px;
+    font-size: 20px;
+}
+#form{
     background-color: #6f7f7f;
     height: 550px;
     padding: 0 120px 0 40px;
@@ -58,7 +62,7 @@ nav a:last-of-type button{
     z-index: 2;
     border-radius: 0 10px 10px 0;
 }
-.form h2{
+#form h2{
     text-align: center;
 }
 label{
@@ -66,7 +70,7 @@ label{
     font-weight: bold;
 }
 #first input{
-    margin-left: 25px;
+    margin: 0 0 25px 25px;
     width: 283px;
     height: 30px;
     border-radius: 5px;
@@ -76,15 +80,18 @@ label{
 }
 #second input{
     width: 233px;
-    height: 20px;
+    height: 25px;
     border-radius: 5px;
+    margin-bottom: 20px;
 }
 #month{
-    margin-left:77px;
+    margin:0 0 20px 77px;
 }
 #month input{
     width: 233px;
+    height: 25px;
     border-radius: 5px;
+    margin-bottom: 20px;
 }
 #third{
     margin-left: 95px;
@@ -92,7 +99,9 @@ label{
 #third input{
     height: 20px;
     width: 233px;
+    height: 25px;
     border-radius: 5px;
+    margin-bottom: 25px;
 }
 #fourth span{
     margin-left: 70px;
@@ -100,6 +109,7 @@ label{
 #fourth>span>input{
     height: 15px;
     width: 15px;
+    margin-bottom: 50px;
 }
 #fourth>span>label:first-of-type{
     padding-right: 50px;
