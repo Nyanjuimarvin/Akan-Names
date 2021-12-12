@@ -43,10 +43,10 @@ const femaleAkan = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
 form.addEventListener('submit',(e)=>{
   e.preventDefault();
   calculateDay(dateVal,monthVal,yearVal);
-  assignMaleAkan( maleRadio, dayVal );
-  assignFemaleAkan( femaleRadio, dayVal );
+  assignMaleAkan( maleRadio, switchable );
+  assignFemaleAkan( femaleRadio, switchable );
   alert(`Hey ${nameVal} , You were born on${weekDay(switchable)}..Your Akan Name is${select(userGender)}`);
-  
+
 });
 
 //Validate date
@@ -116,7 +116,7 @@ function assignMaleAkan(gender, day) {
   } else if (assign_Day === 6 && assign_Gender === maleRadio) {
     return maleAkan [6];
   } else {
-    return "INVALID";
+    return "NO AKAN NAME!!";
   }
 }
 
@@ -139,7 +139,7 @@ function assignFemaleAkan(gender, day) {
   } else if (assign_Day === 6 && assign_Gender === femaleRadio) {
     return femaleAkan [6];
   } else {
-    return "INVALID";
+    return "NO AKAN NAME!!";
   }
 }
 
@@ -151,7 +151,7 @@ function select(genderZ){
     return assignFemaleAkan;
   }
   else{
-    return "SORRY,APP CANT SUPPORT OTHER GENDERS FOR NOW";
+    return "SORRY,THIS APP DOES NOT SUPPORT OTHER GENDER INPUTS FOR NOW";
   }
 }
 
@@ -178,6 +178,6 @@ function weekDay(notDay){
       return dayOfWeek[6];
       break;
     default:
-      return "WHAT DAY WERE YOU BORN?";
+      return "INVALID DAY";
   }
 }
