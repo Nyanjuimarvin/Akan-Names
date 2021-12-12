@@ -3,11 +3,14 @@ const form = document.querySelector("form");
 const dateInput = form.elements.date;
 const monthInput = form.elements.month;
 const yearInput = form.elements.year;
+const userName = form.elements.name;
+const userGender = form.elements.gender;
 
 //Define value variables
 const dateVal = dateInput.value;
 const monthVal = monthInput.value;
 const yearVal = yearInput.value;
+const nameVal = userName.value;
 
 //Radio input Variables
 const maleRadio = form.elements[4];
@@ -37,13 +40,24 @@ const femaleAkan = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
 
 //validate form input
 
-//Validate date
-dateInput.addEventListener('input', (e) => {
+form.addEventListener('submit',(e)=>{
   e.preventDefault();
-    if(dateInput.value <= 0 || dateInput.value > 31 ){
-        alert( 'Invalid Date:Date should be ( 1 - 12 )');
-        dateInput.value = '';
-    }
+  calculateDay(dateVal,monthVal,yearVal);
+  assignMaleAkan( maleRadio, dayVal );
+  assignFemaleAkan( femaleRadio, dayVal );
+  alert(`Hey ${nameVal} , You were born on${weekDay(switchable)}..Your Akan Name is${select(userGender)}`);
+
+  alert('SUBMITTED');
+});
+
+//Validate date
+
+dateInput.addEventListener("input", (e) => {
+  e.preventDefault();
+  if (dateInput.value <= 0 || dateInput.value > 31) {
+    alert("Invalid Date:Date should be ( 1 - 12 )");
+    dateInput.value = "";
+  }
 });
 
 //Validate month
@@ -75,15 +89,96 @@ yearInput.addEventListener("blur", (e) => {
 
 //Function for calculating day of the week as a number where * Sunday = 0 *
 const calculateDay = (userDay, userMonth, userYear) => {
-  var year_String = userYear.toString();
-  var century_Digit = year_String.substr(0, 2);
-  var year_Digit = century_Digit.substr(2, 4);
-  return Math.floor((parseInt(century_Digit) / 4 )-
-      2 * (parseInt(century_Digit) - 1) +
-      (5 * (parseInt(year_Digit) ) / 4) +
-      ( ( 26 * (parseInt(userMonth) + 1)) / 10 ) +
-      ( parseInt(userDay) ) % 7);
+  const year_String = userYear.toString();
+  const century_Digit = year_String.substr(0, 2);
+  const year_Digit = century_Digit.substr(2, 4);
+  return Math.floor((((Number(century_Digit)/4)-2*Number(century_Digit)-1)+
+  ((5*Number(year_Digit)/4))+((26*Number(userMonth+1)/10))+userDay)%7);
 
 };
 
+const switchable = calculateDay;//Assign function to a variable *Not a good idea*
+function assignMaleAkan(gender, day) {
+  const assign_Gender = gender;
+  const assign_Day = day;
 
+  if (assign_Day === 0 && assign_Gender === maleRadio) {
+    return maleAkan[0];
+  } else if (assign_Day === 1 && assign_Gender === maleRadio) {
+    return maleAkan [1];
+  } else if (assign_Day === 2 && assign_Gender === maleRadio) {
+    return maleAkan [2];
+  } else if (assign_Day === 3 && assign_Gender === maleRadio) {
+    return maleAkan [3];
+  } else if (assign_Day === 4 && assign_Gender === maleRadio) {
+    return maleAkan [3];
+  } else if (assign_Day === 5 && assign_Gender === maleRadio) {
+    return maleAkan [5];
+  } else if (assign_Day === 6 && assign_Gender === maleRadio) {
+    return maleAkan [6];
+  } else {
+    return "INVALID";
+  }
+}
+
+function assignFemaleAkan(gender, day) {
+  const assign_Gender = gender;
+  const assign_Day = day;
+
+  if (assign_Day === 0 && assign_Gender === femaleRadio) {
+    return femaleAkan[0];
+  } else if (assign_Day === 1 && assign_Gender === femaleRadio) {
+    return femaleAkan [1];
+  } else if (assign_Day === 2 && assign_Gender === femaleRadio) {
+    return femaleAkan [2];
+  } else if (assign_Day === 3 && assign_Gender === femaleRadio) {
+    return femaleAkan [3];
+  } else if (assign_Day === 4 && assign_Gender === femaleRadio) {
+    return femaleAkan [3];
+  } else if (assign_Day === 5 && assign_Gender === femaleRadio) {
+    return femaleAkan [5];
+  } else if (assign_Day === 6 && assign_Gender === femaleRadio) {
+    return femaleAkan [6];
+  } else {
+    return "INVALID";
+  }
+}
+
+function select(genderZ){
+  if( genderZ === maleRadio){
+    return assignMaleAkan;
+  }
+  else if(genderZ === femaleRadio){
+    return assignFemaleAkan;
+  }
+  else{
+    return "SORRY,APP CANT SUPPORT OTHER GENDERS FOR NOW";
+  }
+}
+
+function weekDay(notDay){
+  switch(notDay){
+    case 0:
+      return dayOfWeek[0];
+      break;
+    case 1:
+      return dayOfWeek[1];
+    case 2:
+      return dayOfWeek[2];
+      break;
+    case 3:
+      return dayOfWeek[3];
+      break;
+    case 4:
+      return dayOfWeek[4];
+      break;
+    case 5:
+      return dayOfWeek[5];
+      break;
+    case 6:
+      return dayOfWeek[6];
+      break;
+    default:
+      return "WHAT DAY WERE YOU BORN?";
+  }
+}
