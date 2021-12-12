@@ -81,10 +81,8 @@ label{
 #other{
     margin-left: 97px;
 }
-#fifth{
+form button{
     margin-left: 20%;
-}
-#fifth input{
     width: 240px;
     height: 50px;
 }
