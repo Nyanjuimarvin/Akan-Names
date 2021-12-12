@@ -9,7 +9,13 @@ const dateVal = dateInput.value;
 const monthVal = monthInput.value;
 const yearVal = yearInput.value;
 
-//Function for calculating Day
+//Array Declarations
+
+const dayOfWeek = [ "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" ];
+const maleAkan = [ "Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame" ];
+const femaleAkan = [ "Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama" ];
+
+//Function for calculating day of the week as a number where * Sunday = 0 *
 const calculateDay = ( dateVal, monthVal, yearVal )=>{
     var year_String = yearVal.toString();
     var century_Digit = year_String.substr(0,2);
