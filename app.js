@@ -42,10 +42,12 @@ const femaleAkan = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
 
 form.addEventListener('submit',(e)=>{
   e.preventDefault();
-  calculateDay(dateVal,monthVal,yearVal);
+  calculateDay(dateInput.value,monthInput.value,yearInput.value);
   assignMaleAkan( maleRadio, switchable );
   assignFemaleAkan( femaleRadio, switchable );
-  alert(`Hey ${nameVal} , You were born on${weekDay(switchable)}..Your Akan Name is${select(userGender)}`);
+  gender_Holder(userGender);
+  alert(`Hey ${nameVal} , You were born on${weekDay(switchable)}..Your Akan Name is${select(userGender.value)}`);
+  form.elements.value = '';
 
 });
 
@@ -144,16 +146,28 @@ function assignFemaleAkan(gender, day) {
 }
 
 function select(genderZ){
-  if( genderZ === maleRadio){
+  if( genderZ === userGender){
     return assignMaleAkan;
   }
-  else if(genderZ === femaleRadio){
+  else if(genderZ === userGender){
     return assignFemaleAkan;
   }
   else{
     return "SORRY,THIS APP DOES NOT SUPPORT OTHER GENDER INPUTS FOR NOW";
   }
 }
+
+var gender_Holder = (GenderY)=>{
+  if(GenderY == userGender[0].value ){
+    return assignMaleAkan;
+  }
+  else if(GenderY == userGender[1].value ){
+    return assignFemaleAkan;
+  }
+  else{
+    return "INVALID";
+  }
+};
 
 function weekDay(notDay){
   switch(notDay){
