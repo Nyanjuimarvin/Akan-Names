@@ -24,15 +24,61 @@ nav a:last-of-type button{
 }
 .container2{
     background-color: #9d2b20;
-    padding: 30px;
 }
 .col-8{
     display: flex;
     justify-content: center;
+    align-content: center;
 }
 .image img{
-    width: 550px;
+    height: 550px;
+    z-index: 1;
+    margin-left: -30px;
+}
+.form{
+    background-color: #6f7f7f;
+    height: 550px;
+    position: absolute;
+    margin-left: 45%;
+    z-index: 2;
+}
+.form h2{
+    text-align: center;
+}
+label{
+    font-size: 20px;
+    font-weight: bold;
+}
+#first input{
+    margin-left: 40px;
+    width: 250px;
+}
+#second span{
+    margin-left: 40px;
+}
+#second input{
+    width: 60px;
+}
+#third{
+    margin-left: 100px;
+    width: 250px;
+}
+#fourth span{
+    margin-left: 30px;
+}
+#other{
+    margin-left: 97px;
+}
+#fifth{
+    margin-left: 20%;
+}
+#fifth input{
+    width: 240px;
+    height: 50px;
 }
 footer{
+    text-align: center;
+    overflow: hidden;
+    padding: 30px;
     background-image: url(images/709616122534e90b8c2a289ce0a07f9b.jpg);
 }
