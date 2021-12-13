@@ -5,6 +5,7 @@ const monthInput = form.elements.month;
 const yearInput = form.elements.year;
 const userName = form.elements.name;
 const userGender = form.elements.gender;
+const Genders = document.getElementsByName('gender');
 
 //Define value variables
 const dateVal = dateInput.value;
@@ -40,15 +41,13 @@ const femaleAkan = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
 
 //validate form input
 
-form.addEventListener('submit',(e)=>{
+form.addEventListener("submit", (e) => {
   e.preventDefault();
-  calculateDay(dateInput.value,monthInput.value,yearInput.value);
-  assignMaleAkan( maleRadio, switchable );
-  assignFemaleAkan( femaleRadio, switchable );
-  gender_Holder(userGender);
-  alert(`Hey ${nameVal} , You were born on${weekDay(switchable)}..Your Akan Name is${select(userGender.value)}`);
-  form.elements.value = '';
-
+  const dateBorn = calculateDay(dateInput.value,monthInput.value,yearInput.value);
+  var alertName = determine(userGender);
+  var sortAssign = myGendersSort(userGender);
+  alert(`Hey ${userName.value} , You were born on ${weekDay(dateBorn)}..Your Akan Name is ${sortAssign}`);
+  form.elements.value = "";
 });
 
 //Validate date
@@ -83,94 +82,118 @@ yearInput.addEventListener("input", (e) => {
 yearInput.addEventListener("blur", (e) => {
   e.preventDefault();
   if (yearInput.value > 0 && yearInput.value < 1900) {
-    confirm("Are You one of 27 Dead Apostle Ancestors");
+    alert("Are You one of the 27 Dead Apostle Ancestors");
     yearInput.value = "";
   }
 });
+
+//Try Getting gender input values
+const myGendersSort = ()=>{
+  for(let genderIterator of Genders ){
+    if(genderIterator.checked){
+      return genderIterator.value;
+    }
+  }
+}
+
+//Save function to a variable *Again*
+gender_Decide = myGendersSort();
+
+const returnAkan = (gender_Decide)=>{
+if( gender_Decide == "male" ){
+  assignMaleAkan(gender_Decide,calculateDay);
+}else if( gender_Decide == "female" ){
+  assignFemaleAkan(gender_Decide,calculateDay)
+}else{
+  return "NO AKAN NAME";
+}
+}
 
 //Function for calculating day of the week as a number where * Sunday = 0 *
 const calculateDay = (userDay, userMonth, userYear) => {
   const year_String = userYear.toString();
   const century_Digit = year_String.substr(0, 2);
   const year_Digit = century_Digit.substr(2, 4);
-  return Math.floor((((Number(century_Digit)/4)-2*Number(century_Digit)-1)+
-  ((5*Number(year_Digit)/4))+((26*Number(userMonth+1)/10))+userDay)%7);
-
+  return Math.floor(
+    (Number(century_Digit) / 4 -
+      2 * Number(century_Digit) -
+      1 +
+      (5 * Number(year_Digit)) / 4 +
+      (26 * Number(userMonth + 1)) / 10 +
+      userDay) %
+      7
+  );
 };
 
-const switchable = calculateDay;//Assign function to a variable *Not a good idea*
-function assignMaleAkan(gender, day) {
+const switchable = calculateDay; //Assign function to a variable *Not a good idea*
+
+const assignMaleAkan = (gender, day) => {
   const assign_Gender = gender;
   const assign_Day = day;
 
-  if (assign_Day === 0 && assign_Gender === maleRadio) {
+  if (assign_Day === 0 && assign_Gender == maleRadio) {
     return maleAkan[0];
   } else if (assign_Day === 1 && assign_Gender === maleRadio) {
-    return maleAkan [1];
+    return maleAkan[1];
   } else if (assign_Day === 2 && assign_Gender === maleRadio) {
-    return maleAkan [2];
+    return maleAkan[2];
   } else if (assign_Day === 3 && assign_Gender === maleRadio) {
-    return maleAkan [3];
+    return maleAkan[3];
   } else if (assign_Day === 4 && assign_Gender === maleRadio) {
-    return maleAkan [3];
+    return maleAkan[3];
   } else if (assign_Day === 5 && assign_Gender === maleRadio) {
-    return maleAkan [5];
+    return maleAkan[5];
   } else if (assign_Day === 6 && assign_Gender === maleRadio) {
-    return maleAkan [6];
+    return maleAkan[6];
   } else {
     return "NO AKAN NAME!!";
   }
-}
+};
 
-function assignFemaleAkan(gender, day) {
+const assignFemaleAkan = (gender, day) => {
   const assign_Gender = gender;
   const assign_Day = day;
 
   if (assign_Day === 0 && assign_Gender === femaleRadio) {
     return femaleAkan[0];
   } else if (assign_Day === 1 && assign_Gender === femaleRadio) {
-    return femaleAkan [1];
+    return femaleAkan[1];
   } else if (assign_Day === 2 && assign_Gender === femaleRadio) {
-    return femaleAkan [2];
+    return femaleAkan[2];
   } else if (assign_Day === 3 && assign_Gender === femaleRadio) {
-    return femaleAkan [3];
+    return femaleAkan[3];
   } else if (assign_Day === 4 && assign_Gender === femaleRadio) {
-    return femaleAkan [3];
+    return femaleAkan[3];
   } else if (assign_Day === 5 && assign_Gender === femaleRadio) {
-    return femaleAkan [5];
+    return femaleAkan[5];
   } else if (assign_Day === 6 && assign_Gender === femaleRadio) {
-    return femaleAkan [6];
+    return femaleAkan[6];
   } else {
     return "NO AKAN NAME!!";
   }
 }
 
-function select(genderZ){
-  if( genderZ === userGender){
-    return assignMaleAkan;
+const determine = (genderTop)=>{
+  if(genderTop == userName[0]){
+    return assignMaleAkan(maleRadio,calculateDay);
   }
-  else if(genderZ === userGender){
-    return assignFemaleAkan;
-  }
-  else{
-    return "SORRY,THIS APP DOES NOT SUPPORT OTHER GENDER INPUTS FOR NOW";
+  else if(genderTop == userName[1]){
+    return assignFemaleAkan(femaleRadio, calculateDay);
   }
 }
 
-var gender_Holder = (GenderY)=>{
-  if(GenderY == userGender[0].value ){
-    return assignMaleAkan;
-  }
-  else if(GenderY == userGender[1].value ){
-    return assignFemaleAkan;
-  }
-  else{
+var gender_Holder = (GenderY) => {
+  if (GenderY == userGender[0].value) {
+    return assignMaleAkan(maleradio,calculateDay);
+  } else if (GenderY == userGender[1].value) {
+    return assignFemaleAkan(femaleRadio,calculateDay);
+  } else {
     return "INVALID";
   }
 };
 
-function weekDay(notDay){
-  switch(notDay){
+function weekDay(notDay) {
+  switch (notDay) {
     case 0:
       return dayOfWeek[0];
       break;
