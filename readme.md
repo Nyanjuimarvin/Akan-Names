@@ -1,6 +1,14 @@
 # AKAN NAME GENERATOR
 
+## Site Screenshots
+
 ![ScreenShot](images/screen1.png)
+
+![ScreenShot](images/screen2.png)
+
+![ScreenShot](images/screen3.png)
+
+![ScreenShot](images/screen4.png)
 
 ## Description
 This is a simple web application that assigns Akan Names once a form is filled out.The naming criteria is done by calculating the day the user was born and their gender.
@@ -50,7 +58,7 @@ Click the Link to run the app
 - The date calculation is somewhat inaccurate.
 - The submit button returns a name on selection of gender only.
 
-### Behavior Driven Development
+## Behavior Driven Development
 The implementation of this project required many steps but the testing one was prominent. All testing was done on Google Console.
 
 Here is what to expect on interaction with the form:
@@ -60,16 +68,16 @@ Here is what to expect on interaction with the form:
 - Year - If the year is out of Range,the app will alert an invalid input message and specify the expected range of input.
 - Submit - On submission, the app assigns an Akan Name in the form [Hey(Name), You were born on(Day of the Week).Your Akan Name is(Akan Name)].
 
-### Future plans
+## Future plans
 - Make the app responsive.
 - Fix minor bugs
 
-### Contact info
+## Contact info
 Reach out to me through any of the following
 - Phone - +254741994061
 - Email - marnyanjui@gmail.com
 
-### License and Copyright
+## License and Copyright
 Copyright 2021 Marvin Nyanjui
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
