@@ -86,7 +86,7 @@ yearInput.addEventListener("blur", (e) => {
     yearInput.value = "";
   }
 });
-
+/*
 //Try Getting gender input values
 const myGendersSort = ()=>{
   for(let genderIterator of Genders ){
@@ -107,7 +107,7 @@ if( gender_Decide === "male" ){
 }else{
   return "NO AKAN NAME";
 }
-}
+} */
 
 //Function for calculating day of the week as a number where * Sunday = 0 *
 const calculateDay = (userDay, userMonth, userYear) => {
@@ -127,6 +127,7 @@ const calculateDay = (userDay, userMonth, userYear) => {
 
 const switchable = calculateDay; //Assign function to a variable *Not a good idea*
 
+/*
 const assignMaleAkan = (gender, day) => {
   const assign_Gender = gender.value;
   const assign_Day = day;
@@ -191,6 +192,7 @@ var gender_Holder = (GenderY) => {
     return "INVALID";
   }
 };
+*/
  
 const selectRadio = (genderPtr)=>{
   const compare = genderPtr.value;
