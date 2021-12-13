@@ -1,7 +1,7 @@
 
 h1,h2,h3,h4{
     color: #000;
-    font-family: african;
+    font-family: African;
 }
 
 nav{
@@ -22,7 +22,7 @@ nav a:last-of-type button{
     height: 50px;
     border-radius: 10px;
     box-shadow: 0px -2px 5px 0px rgba(0,0,0,0.75);
-    font-family: african;
+    font-family: African;
     font-size: 20px;
     color: #006b3f;
     background-color: #6f7f7f;
@@ -38,7 +38,7 @@ nav a:last-of-type button{
     background-color: #6f7f7f;
     color: #000;
     text-align: center;
-    font-family: african;
+    font-family: African;
     font-size: 20px;
     margin-left: 20%;
     margin-right: 20%;
@@ -57,15 +57,15 @@ nav a:last-of-type button{
     height: 550px;
     width: 940px;
     background-image: url(images/H4091-L143757687.jpg);
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.1) 20%,rgba(0,0,0,0.1) 20%), url(images/H4091-L143757687.jpg);
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.1) 10%,rgba(255,255,255,0.1) 10%), url(images/H4091-L143757687.jpg);
     z-index: 1;
     border-radius: 10px 0 0 10px;
     box-shadow: 10px 7px 5px 0px rgba(0,0,0,0.75);
 }
 .left h4{
-    margin-left: 80px;
+    margin-left: 60px;
     font-size: 22px;
-    color: #000;
+    font-weight: bolder;
 }
 #form{
     background-color: #6f7f7f;
@@ -82,7 +82,8 @@ nav a:last-of-type button{
 }
 label{
     font-size: 20px;
-    font-weight: bold;
+    font-family: ubuntu;
+    font-weight: bolder;
 }
 #first input{
     margin: 0 0 25px 25px;
@@ -138,6 +139,10 @@ form button{
     margin-left: 29%;
     width: 274px;
     height: 50px;
+    background-color: #6f7f7f;
+    outline: #fff;
+    color: #006b3f;
+    font-family: African;
     font-size: 20px;
     font-weight: bold;
     border-radius: 18px;
@@ -146,11 +151,7 @@ form button{
 footer{
     text-align: center;
     padding: 30px 0;
-    font-family: african;
+    font-family: African;
     font-size: 20px;
     background-image: url(images/709616122534e90b8c2a289ce0a07f9b.jpg);
-}
-
-@media{
-    media 
 }
