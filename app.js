@@ -46,7 +46,7 @@ form.addEventListener("submit", (e) => {
   const dateBorn = calculateDay(dateInput.value,monthInput.value,yearInput.value);
   selectRadio( userGender );
   const gotAkan = assignAkan(userGender,dateBorn);
-  alert(`Hey ${userName.value} , You were born on ${weekDay(dateBorn)}..Your Akan Name is ${gotAkan}`);
+  alert(`Hey ${userName.value} , You were born on ${weekDay(dateBorn)}.Your Akan Name is ${gotAkan}`);
   form.reset();
 });
 
