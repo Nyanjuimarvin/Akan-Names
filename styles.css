@@ -5,8 +5,6 @@
     url("//db.onlinewebfonts.com/t/a19c1325b7b93513f1665d1f9ee8bc48.ttf") format("truetype"), 
     url("//db.onlinewebfonts.com/t/a19c1325b7b93513f1665d1f9ee8bc48.svg#African") format("svg"); }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-    
 h1,h2,h3,h4{
     color: #000;
     font-family: African;
@@ -78,7 +76,6 @@ nav a:last-of-type button{
 #form{
     background-color: #6f7f7f;
     height: 550px;
-    font-family: roboto;
     padding: 0 120px 0 40px;
     position: absolute;
     margin-left: 37%;
@@ -91,7 +88,8 @@ nav a:last-of-type button{
 }
 label{
     font-size: 20px;
-    font-weight: bold;
+    font-family: ubuntu;
+    font-weight: bolder;
 }
 #first input{
     margin: 0 0 25px 25px;
@@ -162,8 +160,4 @@ footer{
     font-family: African;
     font-size: 20px;
     background-image: url(images/709616122534e90b8c2a289ce0a07f9b.jpg);
-}
-
-@media{
-    media 
 }
