@@ -4,6 +4,9 @@
     url("//db.onlinewebfonts.com/t/a19c1325b7b93513f1665d1f9ee8bc48.woff") format("woff"), 
     url("//db.onlinewebfonts.com/t/a19c1325b7b93513f1665d1f9ee8bc48.ttf") format("truetype"), 
     url("//db.onlinewebfonts.com/t/a19c1325b7b93513f1665d1f9ee8bc48.svg#African") format("svg"); }
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    
 h1,h2,h3,h4{
     color: #000;
     font-family: African;
@@ -62,19 +65,20 @@ nav a:last-of-type button{
     height: 550px;
     width: 940px;
     background-image: url(images/H4091-L143757687.jpg);
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.1) 20%,rgba(0,0,0,0.1) 20%), url(images/H4091-L143757687.jpg);
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.1) 10%,rgba(255,255,255,0.1) 10%), url(images/H4091-L143757687.jpg);
     z-index: 1;
     border-radius: 10px 0 0 10px;
     box-shadow: 10px 7px 5px 0px rgba(0,0,0,0.75);
 }
 .left h4{
-    margin-left: 80px;
+    margin-left: 60px;
     font-size: 22px;
-    color: #000;
+    font-weight: bolder;
 }
 #form{
     background-color: #6f7f7f;
     height: 550px;
+    font-family: roboto;
     padding: 0 120px 0 40px;
     position: absolute;
     margin-left: 37%;
@@ -143,6 +147,10 @@ form button{
     margin-left: 29%;
     width: 274px;
     height: 50px;
+    background-color: #6f7f7f;
+    outline: #fff;
+    color: #006b3f;
+    font-family: African;
     font-size: 20px;
     font-weight: bold;
     border-radius: 18px;
