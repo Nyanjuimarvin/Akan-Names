@@ -1,3 +1,11 @@
+@font-face {font-family: "African"; src: url("//db.onlinewebfonts.com/t/a19c1325b7b93513f1665d1f9ee8bc48.eot"); 
+    src: url("//db.onlinewebfonts.com/t/a19c1325b7b93513f1665d1f9ee8bc48.eot?#iefix") format("embedded-opentype"), 
+    url("//db.onlinewebfonts.com/t/a19c1325b7b93513f1665d1f9ee8bc48.woff2") format("woff2"), 
+    url("//db.onlinewebfonts.com/t/a19c1325b7b93513f1665d1f9ee8bc48.woff") format("woff"), 
+    url("//db.onlinewebfonts.com/t/a19c1325b7b93513f1665d1f9ee8bc48.ttf") format("truetype"), 
+    url("//db.onlinewebfonts.com/t/a19c1325b7b93513f1665d1f9ee8bc48.svg#African") format("svg"); }
+
+
 h1,h2,
 h3,h4 {
   color: #000;
