@@ -5,9 +5,9 @@ const monthInput = form.elements.month;
 const yearInput = form.elements.year;
 const userName = form.elements.name;
 const userGender = form.elements.gender;
-const Genders = document.getElementsByName('gender');
+const Genders = document.getElementsByName("gender");
 
-//Define value variables
+//Define value variables::Not sure if necessary
 const dateVal = dateInput.value;
 const monthVal = monthInput.value;
 const yearVal = yearInput.value;
@@ -43,9 +43,14 @@ const femaleAkan = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  const dateBorn = calculateDay(dateInput.value,monthInput.value,yearInput.value);
-  selectRadio( userGender );
-  const gotAkan = assignAkan(userGender,dateBorn);
+  const dateBorn = calculateDay(
+    dateInput.value,
+    monthInput.value,
+    yearInput.value
+  );
+  const hardDay = getDay()
+  selectRadio(userGender);
+  const gotAkan = assignAkan(userGender, dateBorn);
   alert(`Hey ${userName.value} , You were born on ${weekDay(dateBorn)}.Your Akan Name is ${gotAkan}`);
   form.reset();
 });
@@ -128,12 +133,12 @@ const calculateDay = (userDay, userMonth, userYear) => {
 
 const switchable = calculateDay; //Assign function to a variable *Not a good idea*
 
-
+// Create Akan Names for Male
 const assignMaleAkan = (gender, day) => {
   const assign_Gender = gender.value;
   const assign_Day = day;
 
-  if ( assign_Day === 0 && assign_Gender == maleRadio.value) {
+  if (assign_Day === 0 && assign_Gender == maleRadio.value) {
     return maleAkan[0];
   } else if (assign_Day === 1 && assign_Gender === maleRadio.value) {
     return maleAkan[1];
@@ -152,6 +157,7 @@ const assignMaleAkan = (gender, day) => {
   }
 };
 
+//Create Akan Names for female
 const assignFemaleAkan = (gender, day) => {
   const assign_Gender = gender.value;
   const assign_Day = day;
@@ -173,38 +179,41 @@ const assignFemaleAkan = (gender, day) => {
   } else {
     return "NO AKAN NAME!!";
   }
-}
+};
 
-const determine = (genderTop)=>{
-  if(genderTop == userName[0]){
-    return assignMaleAkan(maleRadio,calculateDay);
-  }
-  else if(genderTop == userName[1]){
+/*
+const determine = (genderTop) => {
+  if (genderTop == userName[0]) {
+    return assignMaleAkan(maleRadio, calculateDay);
+  } else if (genderTop == userName[1]) {
     return assignFemaleAkan(femaleRadio, calculateDay);
   }
-}
+};
+
+//Unused functions to try and get radio node values
 
 var gender_Holder = (GenderY) => {
   if (GenderY == userGender[0].value) {
-    return assignMaleAkan(maleRadio,calculateDay);
+    return assignMaleAkan(maleRadio, calculateDay);
   } else if (GenderY == userGender[1].value) {
-    return assignFemaleAkan(femaleRadio,calculateDay);
+    return assignFemaleAkan(femaleRadio, calculateDay);
   } else {
     return "INVALID";
   }
 };
+*/
 
- 
-const selectRadio = (genderPtr)=>{
+//Function to select radio input being selected
+const selectRadio = (genderPtr) => {
   const compare = genderPtr.value;
-  if( compare === maleRadio.value ){
-    return assignMaleAkan;
-  }else if(compare===femaleRadio.value){
-    return assignFemaleAkan;
-  }else{
+  if (compare === maleRadio.value) {
+    return assignMaleAkan;//
+  } else if (compare === femaleRadio.value) {
+    return assignFemaleAkan;//
+  } else {
     return "INVALID";
   }
-}
+};
 
 function weekDay(notDay) {
   switch (notDay) {
@@ -239,7 +248,7 @@ const assignAkan = (gender, day) => {
   const assign_Gender = gender.value;
   const assign_Day = day;
 
-  if ( assign_Day === 0 && assign_Gender == maleRadio.value) {
+  if (assign_Day === 0 && assign_Gender == maleRadio.value) {
     return maleAkan[0];
   } else if (assign_Day === 1 && assign_Gender === maleRadio.value) {
     return maleAkan[1];
@@ -270,4 +279,5 @@ const assignAkan = (gender, day) => {
   } else {
     return "NO AKAN NAME!!";
   }
-}
+};
+

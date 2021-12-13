@@ -1,157 +1,162 @@
-
-h1,h2,h3,h4{
-    color: #000;
-    font-family: African;
+h1,h2,
+h3,h4 {
+  color: #000;
+  font-family: African;
 }
 
-nav{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #9d2b20;
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #9d2b20;
 }
-nav a>img{
-    height: 140px;
-    border-radius: 50%;
+nav a > img {
+  height: 140px;
+  border-radius: 50%;
 }
-nav h1{
-    font-size: 35px;
+nav h1 {
+  font-size: 35px;
 }
-nav a:last-of-type button{
-    width: 140px;
-    height: 50px;
-    border-radius: 10px;
-    box-shadow: 0px -2px 5px 0px rgba(0,0,0,0.75);
-    font-family: African;
-    font-size: 20px;
-    color: #006b3f;
-    background-color: #6f7f7f;
+nav a:last-of-type button {
+  width: 140px;
+  height: 50px;
+  border-radius: 10px;
+  box-shadow: 0px -2px 5px 0px rgba(0, 0, 0, 0.75);
+  font-family: African;
+  font-size: 20px;
+  color: #006b3f;
+  background-color: #6f7f7f;
 }
-.container1{
-    padding: 130px 0;
-    font-weight: bolder;
-    background-image: url(images/dfe2d55c54a8d836c04f37874ea28e80.jpg);
-    opacity: 1;
+.container1 {
+  padding: 130px 0;
+  font-weight: bolder;
+  background-image: url(images/dfe2d55c54a8d836c04f37874ea28e80.jpg);
+  opacity: 1;
 }
-#describe{
-    border: 15px groove #9d2b20;
-    background-color: #6f7f7f;
-    color: #000;
-    text-align: center;
-    font-family: African;
-    font-size: 20px;
-    margin-left: 20%;
-    margin-right: 20%;
-    border-radius: 17px;
-    box-shadow: 10px 7px 5px 0px rgba(0,0,0,0.75);
+#describe {
+  border: 15px groove #9d2b20;
+  background-color: #6f7f7f;
+  color: #000;
+  text-align: center;
+  font-family: African;
+  font-size: 20px;
+  margin-left: 20%;
+  margin-right: 20%;
+  border-radius: 17px;
+  box-shadow: 10px 7px 5px 0px rgba(0, 0, 0, 0.75);
 }
-.container2{
-    background-color: #9d2b20;
-    padding: 120px 0;
+.container2 {
+  background-color: #9d2b20;
+  padding: 120px 0;
 }
-.col-8{
-    display: flex;
-    justify-content: center;
+.col-8 {
+  display: flex;
+  justify-content: center;
 }
-.left{
-    height: 550px;
-    width: 940px;
-    background-image: url(images/H4091-L143757687.jpg);
-    background-image: linear-gradient(to bottom, rgba(255,255,255,0.1) 10%,rgba(255,255,255,0.1) 10%), url(images/H4091-L143757687.jpg);
-    z-index: 1;
-    border-radius: 10px 0 0 10px;
-    box-shadow: 10px 7px 5px 0px rgba(0,0,0,0.75);
+.left {
+  height: 550px;
+  width: 940px;
+  background-image: url(images/H4091-L143757687.jpg);
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.1) 10%,
+      rgba(255, 255, 255, 0.1) 10%
+    ),
+    url(images/H4091-L143757687.jpg);
+  z-index: 1;
+  border-radius: 10px 0 0 10px;
+  box-shadow: 10px 7px 5px 0px rgba(0, 0, 0, 0.75);
 }
-.left h4{
-    margin-left: 60px;
-    font-size: 22px;
-    font-weight: bolder;
+.left h4 {
+  margin-left: 60px;
+  font-size: 22px;
+  font-weight: bolder;
 }
-#form{
-    background-color: #6f7f7f;
-    height: 550px;
-    padding: 0 120px 0 40px;
-    position: absolute;
-    margin-left: 37%;
-    z-index: 2;
-    border-radius: 0 15px 15px 0;
-    font-weight: bold;
+#form {
+  background-color: #6f7f7f;
+  height: 550px;
+  padding: 0 120px 0 40px;
+  position: absolute;
+  margin-left: 37%;
+  z-index: 2;
+  border-radius: 0 15px 15px 0;
+  font-weight: bold;
 }
-#form h2{
-    text-align: center;
+#form h2 {
+  text-align: center;
 }
-label{
-    font-size: 20px;
-    font-family: ubuntu;
-    font-weight: bolder;
+label {
+  font-size: 20px;
+  font-family: ubuntu;
+  font-weight: bolder;
 }
-#first input{
-    margin: 0 0 25px 25px;
-    width: 283px;
-    padding-left: 40px;
-    height: 30px;
-    border-radius: 5px;
-    box-shadow: 0px -2px 5px 0px rgba(0,0,0,0.75);
+#first input {
+  margin: 0 0 25px 25px;
+  width: 283px;
+  padding-left: 40px;
+  height: 30px;
+  border-radius: 5px;
+  box-shadow: 0px -2px 5px 0px rgba(0, 0, 0, 0.75);
 }
-#second span{
-    margin-left: 41px;
+#second span {
+  margin-left: 41px;
 }
-#second input{
-    width: 233px;
-    height: 25px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    box-shadow: 0px -2px 5px 0px rgba(0,0,0,0.75);
+#second input {
+  width: 233px;
+  height: 25px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  box-shadow: 0px -2px 5px 0px rgba(0, 0, 0, 0.75);
 }
-#month{
-    margin:0 0 20px 77px;
+#month {
+  margin: 0 0 20px 77px;
 }
-#month input{
-    width: 233px;
-    height: 25px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    box-shadow: 0px -2px 5px 0px rgba(0,0,0,0.75);
+#month input {
+  width: 233px;
+  height: 25px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  box-shadow: 0px -2px 5px 0px rgba(0, 0, 0, 0.75);
 }
-#third{
-    margin-left: 95px;
+#third {
+  margin-left: 95px;
 }
-#third input{
-    height: 20px;
-    width: 233px;
-    height: 25px;
-    border-radius: 5px;
-    margin-bottom: 25px;
-    box-shadow: 0px -2px 5px 0px rgba(0,0,0,0.75);
+#third input {
+  height: 20px;
+  width: 233px;
+  height: 25px;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  box-shadow: 0px -2px 5px 0px rgba(0, 0, 0, 0.75);
 }
-#fourth span{
-    margin-left: 70px;
+#fourth span {
+  margin-left: 70px;
 }
-#fourth>span>input{
-    height: 15px;
-    width: 15px;
-    margin-bottom: 50px;
+#fourth > span > input {
+  height: 15px;
+  width: 15px;
+  margin-bottom: 50px;
 }
-#fourth>span>label:first-of-type{
-    padding-right: 50px;
+#fourth > span > label:first-of-type {
+  padding-right: 50px;
 }
-form button{
-    margin-left: 29%;
-    width: 274px;
-    height: 50px;
-    background-color: #6f7f7f;
-    outline: #fff;
-    color: #006b3f;
-    font-family: African;
-    font-size: 20px;
-    font-weight: bold;
-    border-radius: 18px;
-    box-shadow: 0px -2px 5px 0px rgba(0,0,0,0.75);
+form button {
+  margin-left: 29%;
+  width: 274px;
+  height: 50px;
+  background-color: #6f7f7f;
+  outline: #fff;
+  color: #006b3f;
+  font-family: African;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 18px;
+  box-shadow: 0px -2px 5px 0px rgba(0, 0, 0, 0.75);
 }
-footer{
-    text-align: center;
-    padding: 30px 0;
-    font-family: African;
-    font-size: 20px;
-    background-image: url(images/709616122534e90b8c2a289ce0a07f9b.jpg);
+footer {
+  text-align: center;
+  padding: 30px 0;
+  font-family: African;
+  font-size: 20px;
+  background-image: url(images/709616122534e90b8c2a289ce0a07f9b.jpg);
 }

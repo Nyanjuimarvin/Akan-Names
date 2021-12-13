@@ -1,5 +1,7 @@
 # AKAN NAME GENERATOR
 
+![ScreenShot](images/screen1.png)
+
 ## Description
 This is a simple web application that assigns Akan Names once a form is filled out.The naming criteria is done by calculating the day the user was born and their gender.
 
