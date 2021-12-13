@@ -39,8 +39,9 @@ The technologies used are:
 This app requires Google chrome as the go to running environment.
 
 ### Run
+
 Click the Link to run the app
-- 
+- https://nyanjuimarvin.github.io/Akan-Names/
 
 
 ### Known Bugs
