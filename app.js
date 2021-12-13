@@ -44,9 +44,9 @@ const femaleAkan = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const dateBorn = calculateDay(dateInput.value,monthInput.value,yearInput.value);
-  var alertName = determine(userGender);
-  var sortAssign = myGendersSort(userGender);
-  alert(`Hey ${userName.value} , You were born on ${weekDay(dateBorn)}..Your Akan Name is ${sortAssign}`);
+  selectRadio( userGender );
+  const gotAkan = assignAkan(userGender,dateBorn);
+  alert(`Hey ${userName.value} , You were born on ${weekDay(dateBorn)}..Your Akan Name is ${gotAkan}`);
   form.elements.value = "";
 });
 
@@ -100,10 +100,10 @@ const myGendersSort = ()=>{
 gender_Decide = myGendersSort();
 
 const returnAkan = (gender_Decide)=>{
-if( gender_Decide == "male" ){
-  assignMaleAkan(gender_Decide,calculateDay);
-}else if( gender_Decide == "female" ){
-  assignFemaleAkan(gender_Decide,calculateDay)
+if( gender_Decide === "male" ){
+  assignMaleAkan(gender_Decide,dayNumber);
+}else if( gender_Decide === "female" ){
+  assignFemaleAkan(gender_Decide,dayNumber);
 }else{
   return "NO AKAN NAME";
 }
@@ -128,22 +128,22 @@ const calculateDay = (userDay, userMonth, userYear) => {
 const switchable = calculateDay; //Assign function to a variable *Not a good idea*
 
 const assignMaleAkan = (gender, day) => {
-  const assign_Gender = gender;
+  const assign_Gender = gender.value;
   const assign_Day = day;
 
-  if (assign_Day === 0 && assign_Gender == maleRadio) {
+  if ( assign_Day === 0 && assign_Gender == maleRadio.value) {
     return maleAkan[0];
-  } else if (assign_Day === 1 && assign_Gender === maleRadio) {
+  } else if (assign_Day === 1 && assign_Gender === maleRadio.value) {
     return maleAkan[1];
-  } else if (assign_Day === 2 && assign_Gender === maleRadio) {
+  } else if (assign_Day === 2 && assign_Gender === maleRadio.value) {
     return maleAkan[2];
-  } else if (assign_Day === 3 && assign_Gender === maleRadio) {
+  } else if (assign_Day === 3 && assign_Gender === maleRadio.value) {
     return maleAkan[3];
-  } else if (assign_Day === 4 && assign_Gender === maleRadio) {
+  } else if (assign_Day === 4 && assign_Gender === maleRadio.value) {
     return maleAkan[3];
-  } else if (assign_Day === 5 && assign_Gender === maleRadio) {
+  } else if (assign_Day === 5 && assign_Gender === maleRadio.value) {
     return maleAkan[5];
-  } else if (assign_Day === 6 && assign_Gender === maleRadio) {
+  } else if (assign_Day === 6 && assign_Gender === maleRadio.value) {
     return maleAkan[6];
   } else {
     return "NO AKAN NAME!!";
@@ -151,22 +151,22 @@ const assignMaleAkan = (gender, day) => {
 };
 
 const assignFemaleAkan = (gender, day) => {
-  const assign_Gender = gender;
+  const assign_Gender = gender.value;
   const assign_Day = day;
 
-  if (assign_Day === 0 && assign_Gender === femaleRadio) {
+  if (assign_Day === 0 && assign_Gender === femaleRadio.value) {
     return femaleAkan[0];
-  } else if (assign_Day === 1 && assign_Gender === femaleRadio) {
+  } else if (assign_Day === 1 && assign_Gender === femaleRadio.value) {
     return femaleAkan[1];
-  } else if (assign_Day === 2 && assign_Gender === femaleRadio) {
+  } else if (assign_Day === 2 && assign_Gender === femaleRadio.value) {
     return femaleAkan[2];
-  } else if (assign_Day === 3 && assign_Gender === femaleRadio) {
+  } else if (assign_Day === 3 && assign_Gender === femaleRadio.value) {
     return femaleAkan[3];
-  } else if (assign_Day === 4 && assign_Gender === femaleRadio) {
+  } else if (assign_Day === 4 && assign_Gender === femaleRadio.value) {
     return femaleAkan[3];
-  } else if (assign_Day === 5 && assign_Gender === femaleRadio) {
+  } else if (assign_Day === 5 && assign_Gender === femaleRadio.value) {
     return femaleAkan[5];
-  } else if (assign_Day === 6 && assign_Gender === femaleRadio) {
+  } else if (assign_Day === 6 && assign_Gender === femaleRadio.value) {
     return femaleAkan[6];
   } else {
     return "NO AKAN NAME!!";
@@ -184,13 +184,24 @@ const determine = (genderTop)=>{
 
 var gender_Holder = (GenderY) => {
   if (GenderY == userGender[0].value) {
-    return assignMaleAkan(maleradio,calculateDay);
+    return assignMaleAkan(maleRadio,calculateDay);
   } else if (GenderY == userGender[1].value) {
     return assignFemaleAkan(femaleRadio,calculateDay);
   } else {
     return "INVALID";
   }
 };
+ 
+const selectRadio = (genderPtr)=>{
+  const compare = genderPtr.value;
+  if( compare === maleRadio.value ){
+    return assignMaleAkan;
+  }else if(compare===femaleRadio.value){
+    return assignFemaleAkan;
+  }else{
+    return "INVALID";
+  }
+}
 
 function weekDay(notDay) {
   switch (notDay) {
@@ -216,5 +227,44 @@ function weekDay(notDay) {
       break;
     default:
       return "INVALID DAY";
+  }
+}
+
+//Try combining Assign function
+
+const assignAkan = (gender, day) => {
+  const assign_Gender = gender.value;
+  const assign_Day = day;
+
+  if ( assign_Day === 0 && assign_Gender == maleRadio.value) {
+    return maleAkan[0];
+  } else if (assign_Day === 1 && assign_Gender === maleRadio.value) {
+    return maleAkan[1];
+  } else if (assign_Day === 2 && assign_Gender === maleRadio.value) {
+    return maleAkan[2];
+  } else if (assign_Day === 3 && assign_Gender === maleRadio.value) {
+    return maleAkan[3];
+  } else if (assign_Day === 4 && assign_Gender === maleRadio.value) {
+    return maleAkan[3];
+  } else if (assign_Day === 5 && assign_Gender === maleRadio.value) {
+    return maleAkan[5];
+  } else if (assign_Day === 6 && assign_Gender === maleRadio.value) {
+    return maleAkan[6];
+  } else if (assign_Day === 0 && assign_Gender === femaleRadio.value) {
+    return femaleAkan[0];
+  } else if (assign_Day === 1 && assign_Gender === femaleRadio.value) {
+    return femaleAkan[1];
+  } else if (assign_Day === 2 && assign_Gender === femaleRadio.value) {
+    return femaleAkan[2];
+  } else if (assign_Day === 3 && assign_Gender === femaleRadio.value) {
+    return femaleAkan[3];
+  } else if (assign_Day === 4 && assign_Gender === femaleRadio.value) {
+    return femaleAkan[3];
+  } else if (assign_Day === 5 && assign_Gender === femaleRadio.value) {
+    return femaleAkan[5];
+  } else if (assign_Day === 6 && assign_Gender === femaleRadio.value) {
+    return femaleAkan[6];
+  } else {
+    return "NO AKAN NAME!!";
   }
 }
