@@ -242,7 +242,6 @@ function weekDay(notDay) {
 }
 
 //Try combining Assign function
-
 const assignAkan = (gender, day) => {
   const assign_Gender = gender.value;
   const assign_Day = day;
