@@ -8,10 +8,10 @@ const userGender = form.elements.gender;
 const Genders = document.getElementsByName("gender");
 
 //Define value variables::Not sure if necessary
-const dateVal = dateInput.value;
+/*const dateVal = dateInput.value;
 const monthVal = monthInput.value;
 const yearVal = yearInput.value;
-const nameVal = userName.value;
+const nameVal = userName.value;*/
 
 //Radio input Variables
 const maleRadio = form.elements[4];
@@ -48,7 +48,11 @@ form.addEventListener("submit", (e) => {
     monthInput.value,
     yearInput.value
   );
+<<<<<<< HEAD
   selectRadio(userGender);
+=======
+ // selectRadio(userGender);
+>>>>>>> 682b0c8c04ddf9b15116e934265ab870dfe5496e
   const gotAkan = assignAkan(userGender, dateBorn);
   alert(`Hey ${userName.value} , You were born on ${weekDay(dateBorn)}.Your Akan Name is ${gotAkan}`);
   form.reset();
@@ -130,10 +134,10 @@ const calculateDay = (userDay, userMonth, userYear) => {
   );
 };
 
-const switchable = calculateDay; //Assign function to a variable *Not a good idea*
+//const switchable = calculateDay; //Assign function to a variable *Not a good idea*
 
 // Create Akan Names for Male
-const assignMaleAkan = (gender, day) => {
+/*const assignMaleAkan = (gender, day) => {
   const assign_Gender = gender.value;
   const assign_Day = day;
 
@@ -180,7 +184,7 @@ const assignFemaleAkan = (gender, day) => {
   }
 };
 
-/*
+
 const determine = (genderTop) => {
   if (genderTop == userName[0]) {
     return assignMaleAkan(maleRadio, calculateDay);
@@ -203,16 +207,16 @@ var gender_Holder = (GenderY) => {
 */
 
 //Function to select radio input being selected
-const selectRadio = (genderPtr) => {
+/*const selectRadio = (genderPtr) => {
   const compare = genderPtr.value;
   if (compare === maleRadio.value) {
-    return assignMaleAkan;//
+    return assignAkan;//
   } else if (compare === femaleRadio.value) {
-    return assignFemaleAkan;//
+    return assignAkan;//
   } else {
     return "INVALID";
   }
-};
+};*/
 
 function weekDay(notDay) {
   switch (notDay) {
@@ -242,7 +246,6 @@ function weekDay(notDay) {
 }
 
 //Try combining Assign function
-
 const assignAkan = (gender, day) => {
   const assign_Gender = gender.value;
   const assign_Day = day;
